@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 # model = pickle.load(open('random_forest_regression_model.pkl', 'rb'))
-model = pickle.load(open(".\\Linear_regressor.pkl", "rb"))
+model = pickle.load(open("Linear_regressor.pkl", "rb"))
 print(type(model))
 
 
@@ -18,8 +18,6 @@ def Home():
     return render_template('index.html')
 
 
-# standard_to = StandardScaler()
-
 @app.route("/predict", methods=['POST'])
 def predict():
     Fuel_Type_Diesel = 0
@@ -27,7 +25,6 @@ def predict():
 
         Present_Price = float(request.form['Present_Price'])
         Kms_Driven = int(request.form['Kms_Driven'])
-        # Kms_Driven2 = np.log(Kms_Driven)
         Owner = int(request.form['Owner'])
         Age = int(request.form['Age'])
         Fuel_Type = request.form['Fuel_Type']
@@ -52,7 +49,7 @@ def predict():
 
         prediction = model.predict([[Present_Price, Kms_Driven, Owner, Age, Fuel_Type_Diesel,
                                      Fuel_Type_Petrol, Seller_Type_Individual, Transmission_Mannual]])
-        print(prediction)
+
         output = round(prediction[0], 2)
 
         if output < 0:
