@@ -43,7 +43,7 @@ def predict():
         else:
             Transmission_Mannual = 0
 
-        model = pickle.load(open(".\\Linear_regressor.pkl", "rb"))
+        #model = pickle.load(open(".\\Linear_regressor.pkl", "rb"))
 
         prediction = model.predict([[Present_Price, Kms_Driven, Owner, Age, Fuel_Type_Diesel,
                                      Fuel_Type_Petrol, Seller_Type_Individual, Transmission_Mannual]])
