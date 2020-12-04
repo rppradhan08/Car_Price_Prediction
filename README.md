@@ -1,19 +1,17 @@
-[![Contributors][contributors-shield]](https://github.com/rppradhan08/Car_Price_Prediction/graphs/contributors)
-[![Forks][forks-shield]](https://github.com/rppradhan08/Car_Price_Prediction/network/members)
-[![Stargazers][stars-shield]](https://github.com/rppradhan08/Car_Price_Prediction/stargazers)
-[![Issues][issues-shield]](https://github.com/rppradhan08/Car_Price_Prediction/issues)
-[![LinkedIn][linkedin-shield]](www.linkedin.com/in/raj-praveen-pradhan-306625101)
+![GitHub Repo stars](https://img.shields.io/github/stars/rppradhan08/Car_Price_Prediction)
+![GitHub forks](https://img.shields.io/github/forks/rppradhan08/Car_Price_Prediction?color=green)
+![contributors-shield](https://img.shields.io/github/contributors/rppradhan08/Car_Price_Prediction)
+[![LinkedIn][linkedin-shield]](https://in.linkedin.com/in/raj-praveen-pradhan-306625101)
 
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/rppradhan08/Car_Price_Prediction">
+    <img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/prj_name.PNG" alt="Logo" width="200px" height="40px">
   </a>
-
-  <h3 align="center">Car Price Prediction</h3>
 
   <p align="center">
     Predicting car price using ML algorithm
@@ -24,8 +22,6 @@
     <a href="https://github.com/rppradhan08/Car_Price_Prediction">View Demo</a>
     ·
     <a href="https://github.com/rppradhan08/Car_Price_Prediction/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/rppradhan08/Car_Price_Prediction/issues">Request Feature</a>
   </p>
 </p>
 
@@ -36,151 +32,110 @@
 
 - [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
-  - [Built With](#built-with)
+  - [Steps involved](#steps-involved)
+  - [Tools used](#tools-used)
+  - [Libraries](#libraries)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
+  - [Data Analysis and Model Selection](#data-analysis-and-model-selection)
+  - [Application Development](#application-development)
+  - [Model Deployment](#model-deployment)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](C:\Users\RAJPRAVEEN\Desktop\Projects\Car_Price_Prediction\Model_Deployment\images\prj_home.PNG)
-
-This project uses [Vehicle dataset from cardekho](https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho?select=car+data.csv) to predict car price.
+<p align="center">
+    <a href="https://carprizpred.herokuapp.com">
+        <img src="images/prj_home.PNG" height="35%" width="50%">
+    </a>
+</p>
+This project uses <a href="https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho?select=car+data.csv">vehicle dataset</a> from cardekho to predict car price.
 Dataset contains information about used cars listed on www.cardekho.com.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+### Steps involved
+* Reading data from source and performing EDA
+* Performing feature engineering to feed desired data into ML model
+* Finding best set of hyper-parameters using Randomized Search CV to train the model
+* Evaluating various Regressor ML models using cross-validation and residual plot
+* Creating web application using flask to predict car price based on various attributes.
+* Finally, deploying the web application on cloud based platform (i.e. Heroku) 
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
-
-### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
+### Tools used
+Following are the tools/frameworks used in developing the application:
+* [CSS](https://en.wikipedia.org/wiki/CSS)
+* [Python](https://www.python.org/)
+* [Flask](https://palletsprojects.com/p/flask/)
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+* [Heroku](https://www.heroku.com/)
+  
+### Libraries
+Below is the list of python libraries used in this project:
 ```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+import sklearn
+import flask
+```
+## Getting Started
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-```sh
-git clone https://github.com/your_username_/Project-Name.git
+To install any of the aforementioned libraries, below command can be written in the Anaconda prompt or terminal :
+
 ```
-3. Install NPM packages
-```sh
-npm install
-```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
+pip install <package_name>
 ```
 
+### Data Analysis and Model Selection
+
+Refer `Car_Price_Prediction.ipynb` to find details regarding data analysis and model selection.
+
+To check model performance, `Residual plot` and scatter plot between `y_test`-`y_pred` are used.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/resuidual_plot.png">
+</p>
+
+Below are the final metrics obtained for various models that were considered in analysis.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/model_metrics.png" height="150px">
+</p>
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+### Application Development
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+After model selection, the web application is developed using `flask` which is a python based web-framework. For source code refer `app.py`.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Below are few snapshots of application in use:
+* Step 1 Filling attributes related to car
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/step_1.png" height="300px">
+  </p>
+* Step 2 Diplaying estimated cost 
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/step_2.png" height="100px">
+  </p>
 
+### Model Deployment
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
+Model is deployed on `heroku` which is a cloud based PaaS. It can be directly linked to central repository for deployment.
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Raj Praveen Pradhan - [LinkedIn](https://in.linkedin.com/in/raj-praveen-pradhan-306625101)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
+Project Link: [https://github.com/rppradhan08/Car_Price_Prediction](https://github.com/rppradhan08/Car_Price_Prediction)
 
 
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+
+
