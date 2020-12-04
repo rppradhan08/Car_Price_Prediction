@@ -104,7 +104,7 @@ To check model performance, `Residual plot` and scatter plot between `y_test`-`y
 Below are the final metrics obtained for various models that were considered in analysis.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/model_metrics.png" height="150px">
+<img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/model_metrics.PNG" height="150px">
 </p>
 
 
@@ -115,11 +115,11 @@ After model selection, the web application is developed using `flask` which is a
 Below are few snapshots of application in use:
 * Step 1 Filling attributes related to car
   <p align="center">
-    <img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/step_1.png" height="300px">
+    <img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/step_1.PNG" height="300px">
   </p>
 * Step 2 Diplaying estimated cost 
   <p align="center">
-    <img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/step_2.png" height="100px">
+    <img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/step_2.PNG" height="100px">
   </p>
 
 ### Model Deployment
