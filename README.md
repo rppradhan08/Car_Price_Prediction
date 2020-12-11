@@ -124,7 +124,9 @@ Below are few snapshots of application in use:
 
 ### Model Deployment
 
-Model is deployed on `heroku` which is a cloud based PaaS. It can be directly linked to central repository for deployment.
+Model is deployed on `heroku` which is a cloud based PaaS. 
+
+Application link : https://carprizpred.herokuapp.com/
 
 <!-- CONTACT -->
 ## Contact
